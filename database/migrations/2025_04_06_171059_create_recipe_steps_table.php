@@ -17,8 +17,6 @@ return new class extends Migration
             $table->unsignedSmallInteger('sort_order')->default(0);
             $table->text('description');
             $table->timestamps();
-
-            $table->fullText('description');
         });
     }
 

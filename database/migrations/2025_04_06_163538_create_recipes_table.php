@@ -13,13 +13,11 @@ return new class extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('author_id')->nullable()->constrained('users');
             $table->string('name')->index();
             $table->string('slug')->unique();
             $table->longText('description')->nullable();
-            $table->foreignId('author_id')->nullable()->constrained('users');
             $table->timestamps();
-
-            $table->fullText('description');
         });
     }
 

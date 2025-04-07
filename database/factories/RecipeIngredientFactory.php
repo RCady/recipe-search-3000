@@ -21,7 +21,7 @@ class RecipeIngredientFactory extends Factory
             'recipe_id' => Recipe::factory(),
             'amount' => fake()->randomFloat(2, 0, 8),
             'unit' => fake()->word,
-            'name' => fake()->words(2, true),
+            'name' => fake()->word,
         ];
     }
 }
