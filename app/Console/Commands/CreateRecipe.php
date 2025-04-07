@@ -70,9 +70,9 @@ class CreateRecipe extends Command
             }
 
             $processedIngredients[] = [
-                'amount' => $parts[0],
-                'unit' => $parts[1],
-                'name' => $parts[2]
+                'amount' => trim($parts[0]),
+                'unit' =>  trim($parts[1]),
+                'name' =>  trim($parts[2])
             ];
         }
 
