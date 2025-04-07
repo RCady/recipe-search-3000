@@ -1,4 +1,23 @@
 ## Getting started
+Follow the below instructions to get things running.
+
+### Additional Instructions for Ryan's Submission
+##### Seed the database
+```
+./vendor/bin/sail artisan migrate --seed
+```
+
+#### Running the CreateRecipe Command
+```shell
+# Ingredient format: amount,unit,ingredient
+./vendor/bin/sail artisan recipes:create "Recipe Name" author@email.com \
+    --description "Recipe Description" \
+    --ingredients 1,cup,flour \
+    --ingredients 0.5,cup,sugar \
+    --steps "Add flour" \
+    --steps "Add sugar" \
+    --steps "Whisk together"
+```
 
 ### Pre-requisites
 - docker
@@ -36,9 +55,9 @@ docker run --rm \
 `./vendor/bin/sail npm run dev --prefix frontend`
 
 ### Confirm your application
-visit the frontend http://localhost:3000
+Visit the frontend http://localhost:3000
 
-visit the backend http://localhost:8888
+Visit the backend http://localhost:8888
 
 
 ### Connecting to your database from localhost
